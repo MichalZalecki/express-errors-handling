@@ -4,18 +4,30 @@
   "dependencies": {
     "@types/boom": "^7.2.1",
     "@types/express": "^4.16.0",
+    "@types/jest": "^23.3.10",
     "@types/joi": "^14.0.0",
     "@types/lodash": "^4.14.118",
     "body-parser": "^1.18.3",
     "boom": "^7.3.0",
     "celebrate": "^9.0.1",
     "express": "^4.16.4",
-    "lodash": "^4.17.11"
+    "jest": "^23.6.0",
+    "lodash": "^4.17.11",
+    "ts-jest": "^23.10.5"
   },
   "devDependencies": {
     "typescript": "^3.2.2"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      ".ts": "ts-jest"
+    },
+    "testEnvironment": "node",
+    "moduleFileExtensions": ["ts", "js"],
+    "testMatch": ["<rootDir>/src/**/*.spec.ts"]
   }
 }
